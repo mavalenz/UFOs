@@ -1,26 +1,6 @@
 // Import the data from data.js
 const tableData = data;
 
-// Reference the HTML table using d3
-var tbody = d3.select("tbody") // tells javascript to look for the <tbody> tags in the HTML
-
-// Simple JavaScript console.log statement
-function printHello() {
-    console.log("Hello there!");
-}
-
-// Converted to an arrow function
-addition = (a, b) => a + b;
-
-// Original doubleAddition function
-function doubleAddition(c, d) {
-    var total = addition(C, d) * 2;
-    return total;
-}
-
-// Convert doubleAddition function into arrow function
-doubleAddition = (c, d) => addition(c, d) * 2;
-
 function buildTable(data) {
     // First, clear out any existing data
     tbody.html("");
@@ -55,10 +35,10 @@ function handleClick() {
     // Rebuild the table using the filtered data.
     // @NOTE: If no date was entered, then filteredData will just be the original tableData.
     buildTable(filteredData);
+}
 
     // Attach an event to listen for the form button.
     d3.select("#filter-btn").on("click", handleClick);
 
     // Build the table when the page loads.
     buildTable(tableData);
-};
